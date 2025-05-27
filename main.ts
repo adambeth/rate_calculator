@@ -40,12 +40,16 @@ function calculateInvestment(
     return results;
   }
 }
-function printResults(resultsArray: InvestmentResults[]): void {
-  resultsArray.forEach((element) => {
-    console.log("NEW ELELEMT");
-    console.log(element);
-  });
-  console.log("s");
+function printResults(resultsArray: CalculationResults): void {
+  if (typeof resultsArray === "string") {
+    console.log("nope");
+  } else {
+    resultsArray.forEach((element) => {
+      console.log("NEW ELELEMT");
+      console.log(element);
+    });
+    console.log("s");
+  }
 }
 console.log(calculateInvestment(data));
 console.log(calculateInvestment(data));
